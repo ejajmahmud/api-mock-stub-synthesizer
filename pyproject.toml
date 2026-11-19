@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "api-mock-stub-synthesizer"
+version = "0.1.0"
+description = "Autonomous OpenAPI and JSON schema inspector generating self-contained HTTP/REST mock test fixtures"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+api-mock-stub-synthesizer = "api_mock_stub_synthesizer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["api_mock_stub_synthesizer*"]
